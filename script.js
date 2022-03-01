@@ -235,11 +235,10 @@ switch(couleur){
     case 'rouge':console.log('vous aimez le rouge'); break;
     case 'vert':console.log('vous aimez le vert'); break;
     default: console.log("Vous n'aimez aucune de nos couleurs disponibles (bleu, rouge, vert)");
-}
+} /* tres interessant si 3 cas ou plus */
+
 
 // Exercice : retranscrire ceci avec if/else if/else
-
-
 if(couleur == 'rouge'){
     document.write('Vous aimez le jaune');
 }
@@ -250,5 +249,19 @@ else if(couleur == 'vert'){
     document.write('Vous aimez le jaune');
 }
 else{
-    document.write('Vous aimez le jaune');
+    document.write('Vous aimez le jaune<br> ');
 }
+
+
+/* isNaN() >>> is Not a Number */
+/* !isNaN() >>> Not is Not a Number = is a number */
+
+let nombre3 = 10;
+if(!isNaN(nombre3)){
+    document.write("C'est bien un nombre !<br>");
+}
+
+if(typeof(nombre3) == 'number'){
+    document.write("C'est bien un nombre !<br>");
+}
+
