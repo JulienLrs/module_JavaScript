@@ -239,7 +239,16 @@ switch(couleur){
 
 // Exercice : retranscrire ceci avec if/else if/else
 
-if(couleur == bleu){
-    document.write('Vous aimez le bleu');
+
+if(couleur == 'rouge'){
+    document.write('Vous aimez le jaune');
 }
-else if(couleur)
+else if(couleur == 'bleu'){
+    document.write('Vous aimez le jaune');
+}
+else if(couleur == 'vert'){
+    document.write('Vous aimez le jaune');
+}
+else{
+    document.write('Vous aimez le jaune');
+}
