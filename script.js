@@ -16,8 +16,41 @@ console.log('message'); // comme log, sur firefox affiche un (i) d'information
 
 document.write('<h2>Variables / déclaration / affectation</h2>');
 
-var maBoite;
-
+var maBoite; // Déclaration
 maBoite = 10; // Affectation
+document.write(maBoite); // Affichage
 
-document.write(maBoite);
+let maBoite2 = 'texte'; // Déclaration + Affichage 
+document.write('<br>');
+document.write('maBoite2');
+
+
+let prenom='Frédéric', nom='Leclercq'; // Déclarations multiples
+
+
+// Concaténation
+document.write("<br>Je m'appelle " + prenom + ' ' + nom + '<br>'); 
+// le + est le symbole de la concaténation 
+// mais il se comporte tel quel si un des éléments est une chaine de caractere
+
+
+// Alternative à la concaténation, utilisation des backquotes (ou backticks)
+//``
+document.write(`<br>Je m'appelle ${prenom} ${nom}`);
+// Les variables sont identifiées avec l'écriture ${}
+
+// Concaténation à l'affectation
+let fruit = 'pomme';
+// fruit = 'fraise' >> ici on remplace "pomme" par "fraise"
+fruit += 'fraise'; // Concaténation à l'affectation
+
+console.log(fruit);
+
+//créer une variable ville, et afficher 'je réside dans la ville...'
+
+
+let ville='Paris'
+
+document.write('<br>Je réside dans la ville de ' + ville);
+document.write(`<br>Je réside dans la ville de ${ville}`);
+
