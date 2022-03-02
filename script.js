@@ -304,7 +304,12 @@ document.write('<h2>Structures itératives : boucles</h2>');
 3 - Incrémentation 
 */
 
+
+
+
+
 // BOUCLE WHILE
+
 let i = 1; // point 1 (situation de départ)
 while(i<=10){ // point 2 (condition qui fait tourner la boucle)
     document.write(i+' ');
@@ -312,7 +317,12 @@ while(i<=10){ // point 2 (condition qui fait tourner la boucle)
 }
 document.write('<hr>');
 
+
+
+
+
 // BOUCLE FOR (pour)
+
 //     1       2     3
 for(let i=1; i<=10; i++){
     document.write(i+' ');
@@ -331,3 +341,68 @@ document.write('<hr>');
 for(let i=10; i<=100; (i+=10)){
     document.write(i+' ');
 }
+
+
+
+
+
+
+// BOUCLE DO/WHILE
+
+document.write('<hr>');
+
+i = 6;
+do{
+    document.write(i+' '); // cette instruction sera réalisée au moins une fois
+    i++;
+}
+while(i<=5);
+
+// exemple
+// let reponse;
+// do{
+//     reponse = window.prompt('Ecrivez stop');
+// }
+// while(reponse != 'stop');
+
+// exemple
+// let reponse;
+// let loisirs = '';
+// do{
+//    reponse = window.prompt('Saisir un loisir ou ecrivez stop quand vous avez terminé');
+
+//    if(reponse!='stop'){
+//     loisirs += reponse + ' ';
+//    }
+// }
+// while(reponse != 'stop');
+
+// document.write('Vos loisirs sont ' + loisirs);
+
+document.write('<select>');
+// 2004 => 1904 de 1 en 1
+for(let annee=2004; annee>= 1904; annee--){
+    document.write(`<option>${annee}</option>`);
+}
+document.write('</select>');
+
+
+
+
+
+// BOUCLES IMBRIQUEE
+let lignes = 8;
+let colonnes = 8;
+
+document.write('<table>');
+for(let lig=1; lig<= lignes; lig++){
+    document.write('<tr>');
+    for (let col=1; col <= colonnes; col++){
+        document.write('<td></td>');
+    }
+    document.write('</tr>');
+}
+document.write('</table>');
+
+
+

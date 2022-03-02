@@ -3,3 +3,22 @@ h2{
     color: aliceblue;
     padding: 5px;
 }
+
+
+td{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) td:nth-child(odd){
+    background: black;
+}
+
+tr:nth-child(odd) td:nth-child(even){
+    background: black;
+}
