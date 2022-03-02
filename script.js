@@ -162,11 +162,11 @@ VRAI (ou exclusif) VRAI = FAUX (ou exclusif)
 
 // utilisation du != (NOT egal)
 if (a != 8) {
-  document.write("a est different de 8<br>");
+document.write("a est different de 8<br>");
 }
 
 if (!(a == 8)) {
-  document.write("a est different de 8<br>");
+document.write("a est different de 8<br>");
 }
 /* on utilise cette écriture quand on veut exécuter du code quand une condition est fausse */
 
@@ -174,13 +174,13 @@ let test = a > 10; // test
 console.log(test);
 
 if (!test) {
-  document.write("c'est vrai que a n'est pas supp à 10<br>");
+document.write("c'est vrai que a n'est pas supp à 10<br>");
 }
 
 let age = 14;
 
 if (!(age > 18)) {
-  document.write("Tu ne rentres pas<br>");
+document.write("Tu ne rentres pas<br>");
 }
 
 age += 2; // age vaut 16 > age = age +2
@@ -195,22 +195,22 @@ console.log(age);
 
 // number,   string(chaine de valeur)
 let varA = 1,
-  varB = "1";
+varB = "1";
 if (varA == varB) {
-  console.log("C'est la même chose");
+console.log("C'est la même chose");
 }
 // les variables sont égales en VALEUR
 
 // Comparaison en VALEUR et en TYPE
 if (varA === varB) {
-  /* ne s'affiche pas car ce n'est pas VRAI */
-  console.log("C'est la même chose en valeur et en type");
+/* ne s'affiche pas car ce n'est pas VRAI */
+console.log("C'est la même chose en valeur et en type");
 }
 
 // autre exemple : 0 et false sont identiques en valeur mais pas en type
 if (0 === false) {
   /* ne s'affiche pas car 0 est un nombre et false un booléen */
-  console.log("C'est la même chose");
+console.log("C'est la même chose");
 }
 
 // ====================================================== //
@@ -218,11 +218,11 @@ if (0 === false) {
 // ====================================================== //
 // le esl/if permet d'intercaler des conditions
 if (a == 8) {
-  document.write("Cas 1 : a vaut 8<br>");
+document.write("Cas 1 : a vaut 8<br>");
 } else if (a != 10) {
-  document.write("Cas 2 : a est différent de 10<br>");
+document.write("Cas 2 : a est différent de 10<br>");
 } else {
-  document.write("Cas 3 : tout le monde a faux<br>");
+document.write("Cas 3 : tout le monde a faux<br>");
 }
 
 // ====================================================== //
@@ -232,30 +232,29 @@ if (a == 8) {
 let couleur = "jaune";
 
 switch (couleur) {
-  case "bleu":
-    console.log("vous aimez le bleu");
-    break;
-  case "rouge":
-    console.log("vous aimez le rouge");
-    break;
-  case "vert":
-    console.log("vous aimez le vert");
-    break;
-  default:
-    console.log(
-      "Vous n'aimez aucune de nos couleurs disponibles (bleu, rouge, vert)"
-    );
+case "bleu":
+console.log("vous aimez le bleu");
+break;
+case "rouge":
+console.log("vous aimez le rouge");
+break;
+case "vert":
+console.log("vous aimez le vert");
+break;
+default:
+console.log(
+"Vous n'aimez aucune de nos couleurs disponibles (bleu, rouge, vert)");
 } /* tres interessant si 3 cas ou plus */
 
 // Exercice : retranscrire ceci avec if/else if/else
 if (couleur == "rouge") {
-  document.write("Vous aimez le jaune");
+document.write("Vous aimez le jaune");
 } else if (couleur == "bleu") {
-  document.write("Vous aimez le jaune");
+document.write("Vous aimez le jaune");
 } else if (couleur == "vert") {
-  document.write("Vous aimez le jaune");
+document.write("Vous aimez le jaune");
 } else {
-  document.write("Vous aimez le jaune<br>");
+document.write("Vous aimez le jaune<br>");
 }
 
 /* isNaN() >>> is Not a Number */
@@ -263,11 +262,11 @@ if (couleur == "rouge") {
 
 let nombre3 = 10;
 if (!isNaN(nombre3)) {
-  document.write("C'est bien un nombre !<br>");
+document.write("C'est bien un nombre !<br>");
 }
 
 if (typeof nombre3 == "number") {
-  document.write("C'est bien un nombre !<br>");
+document.write("C'est bien un nombre !<br>");
 }
 console.log(nombre3);
 
@@ -308,7 +307,7 @@ document.write("<h2>Structures itératives : boucles</h2>");
 let i = 1; // point 1 (situation de départ)
 while (i <= 10) {
   // point 2 (condition qui fait tourner la boucle)
-  document.write(i + " ");
+document.write(i + " ");
   i++; // point 3 (incrémentation)
 }
 document.write("<hr>");
@@ -317,7 +316,7 @@ document.write("<hr>");
 
 //     1       2     3
 for (let i = 1; i <= 10; i++) {
-  document.write(i + " ");
+document.write(i + " ");
 }
 document.write("<hr>");
 
@@ -325,13 +324,13 @@ document.write("<hr>");
 
 i = 10;
 while (i <= 100) {
-  document.write(i + " ");
-  i += 10;
+document.write(i + " ");
+i += 10;
 }
 document.write("<hr>");
 
 for (let i = 10; i <= 100; i += 10) {
-  document.write(i + " ");
+document.write(i + " ");
 }
 
 // BOUCLE DO/WHILE
@@ -340,8 +339,8 @@ document.write("<hr>");
 
 i = 6;
 do {
-  document.write(i + " "); // cette instruction sera réalisée au moins une fois
-  i++;
+document.write(i + " "); // cette instruction sera réalisée au moins une fois
+i++;
 } while (i <= 5);
 
 // exemple
@@ -427,3 +426,96 @@ let valeurPrix = parseFloat(prix);
 console.log(Math.round(valeurPrix)); // arrondi à l'entier le plus proche
 console.log(Math.floor(valeurPrix)); // arrondi à l'entier inférieur
 console.log(Math.ceil(valeurPrix));  // arrondi à l'entier supérieur
+
+// Nombre aléatoire
+console.log(Math.random()); // renvoie un chiffre aléatoire compris entre 0 et 1 non inclus
+
+// simuler un jet de dé 6
+
+console.log(Math.floor(Math.random()*6) + 1); // 1-6
+console.log(Math.floor(1 + Math.random()*6)); // 1-6
+console.log(Math.ceil(Math.random()*5)+ 1);   // 1-6
+
+document.write('<h3>Jeu de dés</h3>');
+
+
+// EXERCICE
+// Simuler un jet de dé pour vous
+//                      pour l'ordinateur
+// Si votre score est supérieur à celui de l'ordinateur, afficher "vous avez gagné"
+// Si votre score est inférieur à celui de l'ordinateur, afficher "vous avez perdu"
+// Si votre score est indentique à celui de l'ordinateur, afficher "match nul"
+
+let monJet = Math.floor(Math.random()*6) + 1;
+let ordiJet = Math.floor(Math.random()*6) + 1;
+
+document.write(`Vous avez obtenu ${monJet} et l'ordinateur a obtenu ${ordiJet}<br>`);
+
+if(monJet > ordiJet){
+    document.write('Vous avez gagné !<br>');
+}
+else if( monJet < ordiJet){
+    document.write('<br>Vous avez perdu !');
+}
+else{
+    document.write('Match nul !');
+}
+
+
+
+document.write("<h2>Fonctions utilisateurs</h2>");
+
+function direBonjour(){
+    document.write('Bonjour!<br>');
+}
+
+direBonjour(); // Je peux appeler ma fonction ici
+// 150 lignes de code ...
+direBonjour(); // ou là
+
+function direBonjour2(prenom){
+    document.write('Bonjour '+prenom+'<br>');
+}
+
+direBonjour2('Dany');
+direBonjour2('Mathieu');
+
+
+function direBonjour3(prenom){
+    return 'Bonjour '+prenom+ '<br>';
+}
+
+let bienvenue = direBonjour3('Julien');
+document.write(direBonjour3('Jenne'));
+
+// Autre exemple avec 2 paramètres
+function addition(a,b){
+    return a+b; // en sortie de renvoie l'addition des deux paramètres
+}
+document.write(addition(53,76) + '<br>');
+
+// Esemple de fonction de calcul de la tva a partir d'un prix HT et d'un taux
+function calculTVA(prixHT, taux){
+    let prixTTC = prixHT + prixHT * taux/100;
+    return prixTTC;
+}
+// esxemples d'utilisation
+document.write(calculTVA(100,20) + '<br>');
+document.write(calculTVA(100,5.5) + '<br>');
+document.write(calculTVA(400,20) + '<br>');
+
+
+
+
+
+// ====================================================== //
+// ====================== EXERCICE ====================== //
+// ====================================================== //
+
+document.write("<h2>EXERCICE JAVASCRIPT</h2>");
+
+
+
+let couleur = "bleu"
+
+document.write("Ma première couleur est le" + couleur);

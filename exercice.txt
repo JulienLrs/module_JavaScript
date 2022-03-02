@@ -1,0 +1,29 @@
+EXERCICE JS : Le mélange des couleurs
+-------------------------------------
+
+1. Demandez à l'utilisateur de saisir une première couleur 
+parmi 3 (rouge,bleu, ou jaune)
+
+2. Demandez à l'utilisateur de saisir une deuxième couleur 
+parmi ces 3 (différente de la première : rouge,bleu, ou jaune)
+
+3. Lui indiquer la couleur obtenue en les mélangeant
+     (jaune et bleu => vert
+      rouge et bleu => violet
+      rouge et jaune => orange)
+
+Mots clés : variables, window.prompt(), conditions
+
+
+----------------------------------------------------------------------
+Eventuelles améliorations bonus : 
+Ajouter des contrôles (est ce que les couleurs sont bien différentes ?)
+Lui poser la question tant que la réponse n'est pas cohérente
+
+
+
+
+
+
+
+1
