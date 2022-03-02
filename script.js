@@ -421,7 +421,9 @@ console.log(Number.isInteger(monNombre));
 
 let prix = "45.92€"; // string
 console.log(parseInt(prix)); // renvoie la partie entiere du nombre dans la chaine
-console.log(parseFloat(prix)); // renvoie la partie décimale du nombre dans la chaine
+console.log(parseFloat(prix)); // renvoie la partie intégrale(décimale incluse) du nombre dans la chaine
 
 let valeurPrix = parseFloat(prix);
 console.log(Math.round(valeurPrix)); // arrondi à l'entier le plus proche
+console.log(Math.floor(valeurPrix)); // arrondi à l'entier inférieur
+console.log(Math.ceil(valeurPrix));  // arrondi à l'entier supérieur
