@@ -280,7 +280,7 @@ console.log(nombre3);
 let sexe = "m";
 let civilite = (sexe == "m") ? "Monsieur" : "Madame";
 // condition   ?   si vrai     sinon
-console.log("Vous êtes un homme");
+console.log(civilite);
 /*
 let civilite;
 if( sexe == 'm'){
@@ -290,3 +290,44 @@ else{
     civilite='Madame'
 }
 */
+
+
+// ====================================================== //
+// =========== STRUCTURES ITERATIVES (BOUCLES) ========== //
+// ====================================================== //
+
+document.write('<h2>Structures itératives : boucles</h2>');
+
+/*
+1 - Situation de départ
+2 - Condition qui fait tourner la boucle
+3 - Incrémentation 
+*/
+
+// BOUCLE WHILE
+let i = 1; // point 1 (situation de départ)
+while(i<=10){ // point 2 (condition qui fait tourner la boucle)
+    document.write(i+' ');
+    i++; // point 3 (incrémentation)
+}
+document.write('<hr>');
+
+// BOUCLE FOR (pour)
+//     1       2     3
+for(let i=1; i<=10; i++){
+    document.write(i+' ');
+}
+document.write('<hr>');
+
+// Exercice: Avec la boucle de votre choix, afficher un comptage de 10 à 100 de 10 en 10 
+
+i = 10; 
+while(i<=100){ 
+    document.write(i+' ');
+    i+=10; 
+} 
+document.write('<hr>');
+
+for(let i=10; i<=100; (i+=10)){
+    document.write(i+' ');
+}
