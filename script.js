@@ -232,30 +232,30 @@ if (a == 8) {
 let couleur = "jaune";
 
 switch (couleur) {
-case "bleu":
+  case "bleu":
     console.log("vous aimez le bleu");
     break;
-case "rouge":
+  case "rouge":
     console.log("vous aimez le rouge");
     break;
-case "vert":
+  case "vert":
     console.log("vous aimez le vert");
     break;
-default:
+  default:
     console.log(
-    "Vous n'aimez aucune de nos couleurs disponibles (bleu, rouge, vert)"
+      "Vous n'aimez aucune de nos couleurs disponibles (bleu, rouge, vert)"
     );
 } /* tres interessant si 3 cas ou plus */
 
 // Exercice : retranscrire ceci avec if/else if/else
 if (couleur == "rouge") {
-document.write("Vous aimez le jaune");
+  document.write("Vous aimez le jaune");
 } else if (couleur == "bleu") {
-document.write("Vous aimez le jaune");
+  document.write("Vous aimez le jaune");
 } else if (couleur == "vert") {
-document.write("Vous aimez le jaune");
+  document.write("Vous aimez le jaune");
 } else {
-document.write("Vous aimez le jaune<br>");
+  document.write("Vous aimez le jaune<br>");
 }
 
 /* isNaN() >>> is Not a Number */
@@ -263,11 +263,11 @@ document.write("Vous aimez le jaune<br>");
 
 let nombre3 = 10;
 if (!isNaN(nombre3)) {
-document.write("C'est bien un nombre !<br>");
+  document.write("C'est bien un nombre !<br>");
 }
 
 if (typeof nombre3 == "number") {
-document.write("C'est bien un nombre !<br>");
+  document.write("C'est bien un nombre !<br>");
 }
 console.log(nombre3);
 
@@ -278,7 +278,7 @@ console.log(nombre3);
 // ====================================================== //
 
 let sexe = "m";
-let civilite = (sexe == "m") ? "Monsieur" : "Madame";
+let civilite = sexe == "m" ? "Monsieur" : "Madame";
 // condition   ?   si vrai     sinon
 console.log(civilite);
 /*
@@ -291,12 +291,11 @@ else{
 }
 */
 
-
 // ====================================================== //
 // =========== STRUCTURES ITERATIVES (BOUCLES) ========== //
 // ====================================================== //
 
-document.write('<h2>Structures itératives : boucles</h2>');
+document.write("<h2>Structures itératives : boucles</h2>");
 
 /*
 1 - Situation de départ
@@ -304,59 +303,46 @@ document.write('<h2>Structures itératives : boucles</h2>');
 3 - Incrémentation 
 */
 
-
-
-
-
 // BOUCLE WHILE
 
 let i = 1; // point 1 (situation de départ)
-while(i<=10){ // point 2 (condition qui fait tourner la boucle)
-    document.write(i+' ');
-    i++; // point 3 (incrémentation)
+while (i <= 10) {
+  // point 2 (condition qui fait tourner la boucle)
+  document.write(i + " ");
+  i++; // point 3 (incrémentation)
 }
-document.write('<hr>');
-
-
-
-
+document.write("<hr>");
 
 // BOUCLE FOR (pour)
 
 //     1       2     3
-for(let i=1; i<=10; i++){
-    document.write(i+' ');
+for (let i = 1; i <= 10; i++) {
+  document.write(i + " ");
 }
-document.write('<hr>');
+document.write("<hr>");
 
-// Exercice: Avec la boucle de votre choix, afficher un comptage de 10 à 100 de 10 en 10 
+// Exercice: Avec la boucle de votre choix, afficher un comptage de 10 à 100 de 10 en 10
 
-i = 10; 
-while(i<=100){ 
-    document.write(i+' ');
-    i+=10; 
-} 
-document.write('<hr>');
-
-for(let i=10; i<=100; (i+=10)){
-    document.write(i+' ');
+i = 10;
+while (i <= 100) {
+  document.write(i + " ");
+  i += 10;
 }
+document.write("<hr>");
 
-
-
-
-
+for (let i = 10; i <= 100; i += 10) {
+  document.write(i + " ");
+}
 
 // BOUCLE DO/WHILE
 
-document.write('<hr>');
+document.write("<hr>");
 
 i = 6;
-do{
-    document.write(i+' '); // cette instruction sera réalisée au moins une fois
-    i++;
-}
-while(i<=5);
+do {
+  document.write(i + " "); // cette instruction sera réalisée au moins une fois
+  i++;
+} while (i <= 5);
 
 // exemple
 // let reponse;
@@ -379,30 +365,63 @@ while(i<=5);
 
 // document.write('Vos loisirs sont ' + loisirs);
 
-document.write('<select>');
+document.write("<select>");
 // 2004 => 1904 de 1 en 1
-for(let annee=2004; annee>= 1904; annee--){
-    document.write(`<option>${annee}</option>`);
+for (let annee = 2004; annee >= 1904; annee--) {
+document.write(`<option>${annee}</option>`);
 }
-document.write('</select>');
-
-
-
-
+document.write("</select>");
 
 // BOUCLES IMBRIQUEE
 let lignes = 8;
 let colonnes = 8;
 
-document.write('<table>');
-for(let lig=1; lig<= lignes; lig++){
-    document.write('<tr>');
-    for (let col=1; col <= colonnes; col++){
-        document.write('<td></td>');
-    }
-    document.write('</tr>');
+document.write("<table>");
+for (let lig = 1; lig <= lignes; lig++) {
+document.write("<tr>");
+for (let col = 1; col <= colonnes; col++) {
+document.write("<td></td>");
 }
-document.write('</table>');
+document.write("</tr>");
+}
+document.write("</table>");
 
+document.write("<h2>Fonctions prédéfinies</h2>");
 
+// ====================================================== //
+// ================ CHAINE DE CARACTERES ================ //
+// ====================================================== //
 
+let phrase = "Je m'apelle Julien"; //propriété
+document.write(`Ma phrase contient ${phrase.length} caractères`);
+// length est une propriété de phrase qui renvoie sa longueur (nbre de caractères)
+// méthode
+document.write(`<br>En majuscule : ${phrase.toUpperCase()} `); // force en majuscule
+
+document.write(phrase.toLowerCase()); // force en minuscule
+
+document.write(`<br>Julien se trouve à la position ` + phrase.indexOf("Julien"));
+// idexOf(chaine) renvoie la position de départ de chaine à l'interieur de phrase
+// (si non trouvé, renvoie à la position -1)
+
+document.write("<hr>");
+
+// sub string (sous chaine) (extraire un morceau de la phrase)
+document.write(phrase.substring(12, 19));
+// substring(position_depart,position_arrivée)
+document.write("<hr>");
+
+let email = "julien.larrouse@gmail.com";
+// extraire la partie nominative d'une adresse email
+document.write(email.substring(email.indexOf("@") + 1));
+
+// Fonctions aux nombres
+let monNombre = 125;
+console.log(Number.isInteger(monNombre));
+
+let prix = "45.92€"; // string
+console.log(parseInt(prix)); // renvoie la partie entiere du nombre dans la chaine
+console.log(parseFloat(prix)); // renvoie la partie décimale du nombre dans la chaine
+
+let valeurPrix = parseFloat(prix);
+console.log(Math.round(valeurPrix)); // arrondi à l'entier le plus proche
