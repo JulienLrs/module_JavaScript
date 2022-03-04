@@ -495,15 +495,38 @@ function addition(a,b){
 document.write(addition(53,76) + '<br>');
 
 // Esemple de fonction de calcul de la tva a partir d'un prix HT et d'un taux
-function calculTVA(prixHT, taux){
+// Déclaration de type 'Function Statement'
+function calculTVA(prixHT, taux=20){
     let prixTTC = prixHT + prixHT * taux/100;
     return prixTTC;
 }
 // esxemples d'utilisation
+// en attribuant une valeur à un parametre, il devient optionnel au moment de l'appel de la fonction et aura une valeur par défaut
 document.write(calculTVA(100,20) + '<br>');
 document.write(calculTVA(100,5.5) + '<br>');
 document.write(calculTVA(400,20) + '<br>');
+document.write(calculTVA(200) + '<br>');
+
+// Déclaration de type 'Function Operator'
+let maFonction = function (){
+  console.log ('Hello');
+};
+
+maFonction();
+
+// Espace local et global 
+let animal = 'loup';
+function jungle(){
+  let animal = 'tigre';
+  return animal;
+}
+document.write(animal); // = loup
+document.write(jungle()); // = tigre
+document.write(animal); // = loup
 
 
 
+
+
+document.write('<h2>Tableaux de données : Arrays </h2>');
 
