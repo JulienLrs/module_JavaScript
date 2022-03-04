@@ -530,3 +530,172 @@ document.write(animal); // = loup
 
 document.write('<h2>Tableaux de données : Arrays </h2>');
 
+
+
+let fruits = ['Banane','Raisin','Pomme','Mangue'];
+console.log(fruits);
+let legumes = new Array('Carrote','Aubergine','Courgette','Poireau');
+console.log(legumes);
+
+document.write(fruits[2]+'<br>');
+document.write(`Mon tableau fruits contient ${fruits.length} éléments<br>`);
+document.write(`Mon tableau legumes contient ${legumes.length} éléments<br>`);
+
+fruits.push('pêche');//ajoute un élément a la fonction fruits
+console.log(fruits);
+
+document.write(fruits.join(', '));// liste les éléments avec un séparateur entre chaque ''
+console.log(fruits.indexOf('Raisin'));
+console.log(fruits.includes('Raisin'));//renvoie a un boolean qui indique si l'élément est inclus dans le tableau ou non
+console.log(fruits.includes('Citron'));
+
+fruits.pop();// retire le dernier élément pusher de la fonction fruits
+
+fruits.splice(2,1);//je retire 1 élément de la fonction fruits qui est en position 2
+fruits.splice(fruits.indexOf('Pomme'),1);
+console.log(fruits);
+
+fruits.shift(); // retire le premier élément de ma fonction
+console.log(fruits);
+
+// fruits.pop();
+// équivalent > fruits.splice(fruits.length -1,1); (longueur total -1 = dernier element ciblé)
+
+//retirer les 4 derniers
+// fruits.splice(fruits.length -4,4);
+
+
+fruits.push('Fraise','Orange');
+// ouverture de la balise ul
+document.write('<ul>');
+for(let i=0; i< fruits.length; i++){ 
+  document.write(`<li>${fruit[i]}</li>`)
+
+}
+document.write('</ul>');
+// fermeture de la balise ul
+
+
+// ====================================================== //
+//  TABLEAUX MULTIDIMENSIONNELS (quand j'ai un tableau dans un tableau)  //
+// ====================================================== //
+
+
+
+// EXEMPLE 1
+let maraicher=[
+  fruits,
+  legumes
+];
+console.log(maraicher);
+
+document.write(maraicher[1][1] + '<br>');// afficher Aubergine
+document.write(maraicher[0][2] + '<br>');// afficher
+
+document.write(`${maraicher[1][1]} et ${maraicher[0][2]}<br>`);
+
+document.write('<ul>');
+for (let i=0; i < maraicher.length; i++)
+{
+    for (let k=0; k < maraicher[i].length; k++){
+      document.write(`<li>${maraicher[i][k]}</li>`);
+    }
+}
+document.write('</ul>');
+
+//Boucle FOR/IN
+
+// EXEMPLE 2 (meme résultat avec écriture différente)
+for(let i in fruits){
+  document.write(i + ' > '+ fruits[i]+ '<br>');
+}
+document.write('<ul>');
+for(let i in maraicher){
+  for(let k in maraicher[i]){
+    document.write(`<li>${maraicher[i][k]}</li>`)
+  }
+}
+document.write('</ul>');
+
+// DOM Document Objet Model
+// AJAX Asynchronous Javascript And XML 
+// JSON JavaScript Object Notation
+
+
+document.write('<h2>Les objets</h2>');
+
+
+// ====================================================== //
+// ======================== JSON ======================== //
+// ====================================================== //
+
+// ~~~~ JSON EST UN FORMAT D'ECHANGES ~~~~ //
+
+
+  // //objet
+  // let voiture = {
+  //   //propriétés
+  //   "marque" : "Mercedes",//valeur
+  //   "modele" : "E220",
+  //   "couleur" : "noire",
+  //   //méthodes
+  //   "demarrer" : function(){
+  //     return "je démarre";
+  //   }
+  // };
+  // console.log(voiture);
+  // document.write(voiture.modele); // affiche la valeur demandée
+  // document.write("<br>");
+  // document.write(voiture.demarrer); //affiche la méthode demandée
+
+
+// PLAN DE FABRICATION
+
+class Maison{
+  constructor(nbPieces, superficie, couleurDesMurs = 'blanc'){
+    this.nbPieces = nbPieces;
+    this.superficie = superficie
+    this.couleurDesMurs = couleurDesMurs;
+    this.nbPortes = 10;
+  }
+
+  repeindre(nouvelleCouleur){
+    this.couleurDesMurs = nouvelleCouleur;
+  }
+
+}
+
+class Appartement extends Maison{
+  constructor(){
+    super();// super constructor
+    this.etage=2;
+  }
+}
+// fabrication d'objets à partir du plan Maison
+let maison1 = new Maison(5,120);
+console.log(maison1.superficie);
+console.log(maison1.couleurDesMurs);
+maison1.repeindre('bleu');
+console.log(maison1.couleurDesMurs);
+
+
+let maison2 = new Maison(2,45,'beige');
+console.log(maison2.couleurDesMurs);
+
+let appart1 = new Appartement(4,80);
+console.log(appart1);
+
+
+let maDate = new Date();
+console.log(maDate);
+console.log(maDate.getDay()); // 0 dimanche -6 samedi
+// 5 = vendredi
+console.log(maDate.getDate());
+// numéro du jour 1 - 31
+console.log(maDate.getMonth());
+
+let jours = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+let mois = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre'];
+document.write(`Aujourd'hui nous sommes ${jours[maDate.getDay()]} ${maDate.getDate()} ${mois[maDate.getMonth()]} ${maDate.getFullYear()}`)
+
+document.write(maDate.toLocaleDateString()); // Format FR 04/03/2022
