@@ -96,7 +96,7 @@ document.write((10 % 5) + "<br>"); // Modulo : reste de la division entière
 document.write(10 ** 5 + "<br>"); // puissance 10²
 
 let chiffre1 = 10,
-  chiffre2 = 3;
+    chiffre2 = 3;
 let resultat = chiffre1 + chiffre2;
 document.write(`${chiffre1}+${chiffre2}=${resultat}<br>`);
 document.write(`${chiffre1 + chiffre2}<br>`);
@@ -116,17 +116,17 @@ console.log(parseFloat("25.34€"));
 document.write("<h2>Structures conditionnelles</h2>");
 
 let a = 10,
-  b = 5,
-  c = 2;
+    b = 5,
+    c = 2;
 
 // Structure if/else
 // BOOLEAN
 if (a > b) {
   // si le booléen est VRAI
-  document.write("a est supérieur à b<br>");
+document.write("a est supérieur à b<br>");
 } else {
   // si le booléen est FAUX
-  document.write("a n'est pas suppérieur à b<br>");
+document.write("a n'est pas suppérieur à b<br>");
 }
 
 // ====================================================== //
@@ -135,7 +135,7 @@ if (a > b) {
 
 // ET : &&
 if (a > b && b > c) {
-  document.write("OK pour les deux conditions<br>");
+document.write("OK pour les deux conditions<br>");
 }
 /*
 FAUX && FAUX = FAUX
@@ -145,13 +145,13 @@ VRAI && VRAI = VRAI
 
 // OU : ||
 if (a == 9 || b > c) {
-  document.write("Ok pour au moins une des conditions<br>");
+document.write("Ok pour au moins une des conditions<br>");
 }
 
 // OU exclusif (simulé)
 // (!) = NOT
 if ((a == 9 && !(b > c)) || (!(a == 9) && b > c)) {
-  document.write("Une de ces conditions seulement doit être vraie<br>");
+document.write("Une de ces conditions seulement doit être vraie<br>");
 }
 /*
 FAUX || FAUX = FAUX
@@ -216,7 +216,7 @@ console.log("C'est la même chose");
 // ====================================================== //
 // ============== Structure if/else if/else ============= //
 // ====================================================== //
-// le esl/if permet d'intercaler des conditions
+// le esle/if permet d'intercaler des conditions
 if (a == 8) {
 document.write("Cas 1 : a vaut 8<br>");
 } else if (a != 10) {
@@ -228,7 +228,7 @@ document.write("Cas 3 : tout le monde a faux<br>");
 // ====================================================== //
 // ================== Structure switch ================== //
 // ====================================================== //
-// (fonctionne si la variable comparée est toujours la même et qu'on la compare a différentes valeurs)
+// (fonctionne si la variable comparée est toujours la même et qu'on la compare à différentes valeurs)
 let couleur = "jaune";
 
 switch (couleur) {
@@ -507,15 +507,3 @@ document.write(calculTVA(400,20) + '<br>');
 
 
 
-
-// ====================================================== //
-// ====================== EXERCICE ====================== //
-// ====================================================== //
-
-document.write("<h2>EXERCICE JAVASCRIPT</h2>");
-
-
-
-let couleur = "bleu"
-
-document.write("Ma première couleur est le" + couleur);
